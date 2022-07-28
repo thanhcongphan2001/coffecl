@@ -1,5 +1,4 @@
 const express = require("express");
-// const morgan = require("morgan");
 //
 const path = require("path");
 const { engine } = require("express-handlebars");
@@ -13,7 +12,6 @@ const methodoverride =require('method-override')
 app.use(methodoverride('_method'))
 const db=require("./config/db")
 // HTTP Logger
-// app.use(morgan('combined'));
 
 //db
 db.connect();
