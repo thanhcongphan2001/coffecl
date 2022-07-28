@@ -12,11 +12,11 @@ const route = require("./routes");
 //   "start": "nodemon --inspect src/index.js",
 const methodoverride =require('method-override')
 app.use(methodoverride('_method'))
-const db=require("./config/db")
+// const db=require("./config/db")
 // HTTP Logger
 
 //db
-db.connect();
+// db.connect();
 
 app.use(express.static(path.join(__dirname, "public")));
 
