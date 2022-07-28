@@ -6,7 +6,7 @@ class Sitecontroller {
  course.find({})
  .then(courses =>{
      courses =courses.map(course =>course.toObject())
-     res.render('home',{courses})
+//      res.render('home',{courses})
     })
  .catch(next);
     }
