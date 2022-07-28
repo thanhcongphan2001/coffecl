@@ -1,0 +1,46 @@
+<style>
+input[type=text], select ,textarea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+</style>
+<div class="content grid wide" style="padding-top: 100px;">
+    <div class="row">
+         <div class="col l-12 m-12 c-12" style="padding: 15px ;">
+                <h1 style="text-align: center;">SUA SAN PHAM</h1>
+    <form  method="post" action="/admin/{{courses._id}}?_method=PUT">
+    <label for="fname">name</label>
+    <input type="text" id="fname" name="name" value="{{courses.name}}">
+    <label for="fname">price</label>
+    <input type="text" id="fname" name="price" value="{{courses.price}}">
+    <label for="fname">mota</label>
+    <textarea id="fname" name="description">{{courses.description}}</textarea>
+      <label for="fname">img</label>
+    <input type="text" id="fname" name="image" value="{{courses.image}}">
+    <input type="submit" value="Submit">
+  </form>
+         </div>
+         </div>
+</div>

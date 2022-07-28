@@ -1,0 +1,157 @@
+
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+  }
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 10px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+   text-align: left;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+.button {
+
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px ;
+}
+#header{
+  display: none !important;
+}
+.footer{
+  display: none !important;
+}
+</style>
+<div class="content grid wide" id="about" >
+    <div class="row">
+        <div class="col l-12 m-12 c-12" style=" padding: 15px 0;text-align: center;">
+ <h1>ADMIN(san pham da xoa)</h1>
+ 
+ <div class="" style="display: flex;justify-content: space-between ;">
+  <form  method="post" action="/admin">
+    <button class="button" style="color: black;text-align: left;background-color: white;"><i class="ti-arrow-left" style="font-size: 32px"></i></button>
+  
+      </form>
+    <a href="/" style="text-align: right;color: black;text-decoration: none;padding: 10px;background-color: aqua;line-height: 32px;">dang xuat</a>
+ </div>
+ 
+       <table class="content-table">
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Name</th>
+      <th>price</th>
+      <th>description</th>
+      <th>img</th>
+      <th>tool</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each courses}}
+    <tr>
+      <td>{{sum @index 1}}</td>
+      <td>{{this.name}}</td>
+      <td>{{this.price}}</td>
+      <td>{{this.description}}</td>
+      <td>{{this.image}}</td>
+      <td>
+  
+    <button data-id="{{this._id}}" class=" button btn-restore" style="background-color:blue;color:black">khoi phuc</button>
+    <button data-id="{{this._id}}" class="button btn-destroy" style="background-color: red;color: black;">xoa xinh vien</button>
+
+      </form>
+
+      </td>
+    </tr>
+   
+ 
+     {{else}}
+      <tr>
+        <td colspan="5" class="text-center"><h1>chua xoa khoa hoc nao</h1></td>
+      </tr>
+ 
+  {{/each}}
+   </tbody>
+   </table>
+ </div>
+             
+         
+ 
+
+          </div>
+                    </div>
+
+          </div>
+
+<form action="" method="post" name="restore"></form>
+<form action="" method="post" name="destroy"></form>
+<script>
+   
+  var restoreForm =document.forms['restore']
+    var restoreBtnAll = document.querySelectorAll('.btn-restore');
+   restoreBtnAll.forEach((restoreBtn) => {
+        restoreBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            var courseId = restoreBtn.getAttribute('data-id');
+            restoreForm.action = '/admin/' + courseId + '/restore?_method=PATCH';
+            restoreForm.submit();
+        });
+    });
+    //
+     var restoreFormdes =document.forms['destroy']
+    var restoreBtnAlldes = document.querySelectorAll('.btn-destroy');
+   restoreBtnAlldes.forEach((restoreBtn) => {
+        restoreBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            var courseId = restoreBtn.getAttribute('data-id');
+            restoreFormdes.action = '/admin/' + courseId + '/force?_method=delete';
+            restoreFormdes.submit();
+        });
+    });
+
+
+</script>

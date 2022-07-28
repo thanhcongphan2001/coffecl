@@ -1,0 +1,124 @@
+
+<style>
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 10px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+   text-align: left;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+.button {
+
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px ;
+}
+#header{
+  display: none !important;
+}
+.footer{
+  display: none !important;
+}
+</style>
+<div class="content grid wide" id="about" style="">
+    <div class="row">
+        <div class="col l-12 m-12 c-12" style=" padding: 15px 0;text-align: center;">
+ <h1>ADMIN</h1>
+ <div style="text-align: left;">
+   <button style="padding: 10px; background-color:gray;border-radius: 5px;border: none;font-size: 30px;">
+  <a href="/admin/trash" style="color: black;text-decoration: none;"><i class="ti-trash">trash ({{deletecount}})</i></a>
+   </button>
+   <form action="/admin/create" method="post" style="display: inline-block;">
+ <button style="padding: 10px;background-color: cyan;border: none;border-radius: 5px;font-size: 30px;">
+  <a href="" style="color: black;text-decoration: none;"><i class="ti-plus">them san pham</i></a>
+   </button>
+     <button style="padding: 10px; background-color:gray;border-radius: 5px;border: none;font-size: 30px;text-align: right;">
+  <a href="/" style="color: black;text-decoration: none;">dang xuat</a>
+   </button>
+   </form>
+   
+
+ </div>
+             
+          <table class="content-table">
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Name</th>
+      <th>price</th>
+      <th>description</th>
+      <th>img</th>
+      <th>tool</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each courses}}
+    <tr>
+      <td>{{sum @index 1}}</td>
+      <td>{{this.name}}</td>
+      <td>{{this.price}}</td>
+      <td>{{this.description}}</td>
+      <td>{{this.image}}</td>
+      <td>
+  
+    <a href="/admin/{{this._id}}/edit" class="button" style="background-color: yellow;color:black;">sua</a>
+      <form  method="post" action="/admin/{{this._id}}?_method=delete">
+    <button class="button" style="background-color: red;color: black;">xoa</button>
+
+      </form>
+
+      </td>
+    </tr>
+    {{else}}
+      <tr>
+        <td colspan="5" class="text-center"><h1>them product di admin</h1></td>
+      </tr>
+ 
+  {{/each}}
+  </tbody>
+</table>
+          </div>
+                    </div>
+
+          </div>
+

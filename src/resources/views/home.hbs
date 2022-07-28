@@ -1,0 +1,143 @@
+
+<div id="slider">
+</div>
+
+<div class="content grid wide" id="about" style="padding-top: 55px;">
+    <div class="row">
+        <div class="col l-12 m-12 c-12" style="text-align: center; padding: 15px 0;">
+            <h2 style="font-size: 50px;">ABOUT US</h2>
+        </div>
+        <div class="col l-12 m-12 c-12" style="text-align: center;">
+            <p style="color: gray;font-size: 20px;margin-bottom: 20px;">Nhà sản xuất
+                cà phê bột từ 1995</p>
+        </div>
+        <div class="col l-6 m-12 c-12" style="margin-top: 20px;">
+            <h2 style="text-align: center;padding-bottom: 20px;">UYÊN PHƯƠNG COFFEE</h2>
+            <p style="text-align: start;color: gray;font-size: 17PX;">Cà Phê UYÊN
+                PHƯƠNG Buôn Mê Thuột được thành lập năm 1991 Với tình yêu và niềm đam mê
+                của một người con bản xứ. Cà phê Uyên Phương luôn đồng hành cùng người
+                dân Tây Nguyên suốt chặng đường 30 qua. Khi đến Buôn Mê Thuột – nhắc đến
+                Uyên Phương, thì bất cứ người dân bản xứ nào cũng biết. Nay Uyên Phương
+                cho ra đời những dòng cà phê hữu cơ – chế biến Natural, với chất lượng
+                tuyệt đỉnh. Là để trả ơn Quê Hương Và để bảo vệ sức khỏe người tiêu
+                dùng, và bảo vệ môi trường. Đến với Uyên Phương là đến với cà phê sức
+                khỏe, cà phê tình yêu!</p>
+        </div>
+        <div class="col l-6 m-12 c-12" style="margin-top: 20px;">
+            <h2 style="text-align: center;padding-bottom: 10px;">Giao Dịch & Bán Hàng</h2>
+            <h1 style="text-align: center;color:green;padding-bottom: 10px;">CÔNG FANG
+                COFFEE</h1>
+            <p style="text-align:center;font-size: 20px;padding-bottom: 10px;" class="hv"><i class="ti-star"
+                    style="color:  green;"></i>Hotline : 0589314808</p>
+            <p style="text-align:center;font-size: 20px;padding-bottom: 10px;" class="hv"><i class="ti-star"
+                    style="color:  green;"></i>Email :
+                thanhcongphan2001@gmail.com</p>
+            <p style="text-align:center;font-size: 20px;padding-bottom: 10px;" class="hv"><i class="ti-star"
+                    style="color:  green;"></i>Địa chỉ : Thạnh lộc quận 12
+                Thành Phố Hồ Chí Minh</p>
+            <div style="text-align: center;" id="product">
+                <img src="imgs/logo" alt="" width="100px" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="slogan grid-full wide" style="background-color:#B27548;height: 125px;margin-bottom: 20px;">
+    <div class="row" style="text-align: center;">
+        <div class="col l-12 m-12 c-12">
+            <p style="font-size: 26px;color:white;margin:20px 0 ;">SẢN PHẨM UYÊN
+                PHƯƠNG COFFEE</p>
+            <p style="font-size:20px;color:white;text-align: center;margin-bottom: 30px;">Cà phê chất lượng hàng đầu
+                buôn ma thuột. Nhà sản xuất cà phê bột từ năm
+                1995</p>
+        </div>
+    </div>
+</div>
+<div class="product grid wide" style="padding-bottom: 50px;">
+    <div class="row">
+        <div class="col l-2 m-12 c-12">
+            <h3>
+                <i class="ti-layout-grid2-alt" style="padding-right: 5px;"></i>DANH MỤC</h2>
+                <ul class="list-product">
+                    <li><a href="">TẤT CẢ SẢN PHẨM</a></li>
+                    <li><a href="">CÀ PHÊ HỮU CƠ CAO CẤP</a></li>
+                    <li><a href="">CÀ PHÊ BỘT</a></li>
+                    <li><a href="">CÀ PHÊ HÒA TAN BMT 91</a></li>
+                    <li><a href="">CÀ PHÊ HÒA TAN BMT 95</a></li>
+                </ul>
+        </div>
+        <div class="col l-10 m-12 c-12">
+            <div class="row" style="text-align: center;">
+{{#each courses}}
+ <div class="col l-4 m-6 c-12" style="background-clip: content-box;margin-top: 8px;margin-bottom: 8px;">
+     <a href="/product/{{this.name}}"><img src="imgs/{{this.image}}" alt="" width="50%" id="img">
+</a>
+                    <p style="padding:5px ;" id="title">{{this.name}}</p>
+                    <p style="padding: 5px;" id="price">{{this.price}}</p>
+                 
+    <input type="button" class="button" value="thêm vào giỏ hàng" width="100px">
+
+                </div>
+{{/each}}
+               
+            </div>
+        </div>
+    </div>
+</div>
+<div class="chosse grid wide" style="padding-bottom: 50px 0;border-bottom: 1px solid gray;">
+    <div class="row">
+        <div class="col l-12 m-12 c-12" style="text-align:center;margin-bottom:8px ;">
+            <h1 style="font-size: 34px" class="cc">WHY CHOOSE US</h1>
+        </div>
+        <div class="col l-4 m-4 m-12" style="text-align:center;">
+            <div><img src="imgs/logo1" alt="" width="30%"></div>
+            <p style="font-size: 18px;margin: 4px 0;" >Tiêu Chuẩn Chất Lượng</p>
+            <p style="color: gray;margin: 4px 0;">Sản xuất theo quy trình đạt chuẩn VSATP. Mô hình khép kín từ sản xuất
+                đến bao bì thương hiệu.</p>
+        </div>
+        <div class="col l-4 m-4 m-12" style="text-align:center;">
+            <div><img src="imgs/logo2" alt="" width="30%"></div>
+            <p style="font-size: 18px;margin: 4px 0;">Tiêu Chuẩn Chất Lượng</p>
+            <p style="color: gray;margin: 4px 0;">Sản xuất theo quy trình đạt chuẩn VSATP. Mô hình khép kín từ sản xuất
+                đến bao bì thương hiệu.</p>
+        </div>
+        <div class="col l-4 m-4 m-12" style="text-align:center;">
+            <div><img src="imgs/logo3.png" alt="" width="30%"></div>
+            <p style="font-size: 18px;margin: 4px 0;">Tiêu Chuẩn Chất Lượng</p>
+            <p style="color: gray;margin: 4px 0;">Sản xuất theo quy trình đạt chuẩn VSATP. Mô hình khép kín từ sản xuất
+                đến bao bì thương hiệu.</p>
+        </div>
+    </div>
+    <div class="grid wide" id="contact" style="color: white;">dd</div>
+</div>
+<div class="login grid wide" style="padding: 50px 0">
+    <div class="row">
+        <div class="col l-12 m-12 c-12 " style="text-align: center; padding: 15px 0;">
+            <h2 style="font-size: 50px;color: #B27548;">ĐĂNG KÍ ĐẠI LÝ NGAY</h2>
+        </div>
+        <div class="col l-12 m-12 c-12">
+            <form action="" method="POST" class="form" id="form-1" style="text-align: center;">
+
+                <div class="form-group">
+
+                    <input id="fullname" name="fullname" type="text" placeholder="Họ và tên" class="form-control">
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group">
+
+                    <input id="email" name="email" type="text" placeholder="Gmail" class="form-control">
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group">
+
+                    <input id="password" name="password" type="password" placeholder="Địa chỉ" class="form-control">
+                    <span class="form-message"></span>
+                </div>
+                <button class="form-submit">Gửi</button>
+            </form>
+        </div>
+    </div>
+    <h2 style="color:#B27548; padding-top: 10px;text-align:center">Chúng tôi luôn có chính sách ưu đãi tốt nhât dành cho
+        đại lý. Liên hệ ngay</h2>
+</div>

@@ -1,0 +1,101 @@
+ 
+  <div id="header">
+            <label class="nav-btn" for="nav_input">
+      <i class="ti-view-list navbars"></i>
+      </label>
+            <input type="checkbox" hidden class="nav_mobile" id="nav_input">
+            <label for="nav_input" class="nav_overplay"></label>
+            <div class="nav_mb">
+                <ul class="nav_mb_list">
+                    <li>
+                        <div class="form-input">
+                            <i class="ti-search"></i>
+                            <input type="text" id="filter" placeholder="Tìm sản phẩm mong muốn..." />
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/">TRANG CHỦ</a>
+                    </li>
+                    <li>
+                        <a href="/#about">GIỚI THIỆU</a>
+                    </li>
+                    <li>
+                        <a href="/#product">SẢN PHẨM</a>
+                    </li>
+                    <li>
+                        <a href="/#contact">LIÊN HỆ</a>
+                    </li>
+                    <li>
+                        <a href="/login">ĐĂNG NHẬP</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="seach-icon ti-heart"></i> ƯA THÍCH
+               </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="liga">
+                <img src="http://localhost:3000/imgs/logo" alt="" width="80px">
+            </div>
+            <ul id="nav">
+                <li>
+                    <a href="/">TRANG CHỦ</a>
+                </li>
+                <li>
+                    <a href="/#about">GIỚI THIỆU</a>
+                </li>
+                <li>
+                    <a href="/#product">SẢN PHẨM</a>
+                </li>
+                <li>
+                    <a href="/#contact">LIÊN HỆ</a>
+                </li>
+                <li>
+                    <a href="/login">ĐĂNG NHẬP</a>
+                </li>
+            </ul>
+            <div class="seach-button">
+                <i class="seach-icon ti-search"></i>
+                <i class="seach-icon ti-heart"></i>
+                <i class="seach-icon ti-shopping-cart cart"></i>
+            </div>
+        </div>
+         <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                   
+                        <div class="cart-items">
+                            <div class="modal-body">
+                                <div class="cart-row">
+                                    <span class=" cart-header cart-column">Sản Phẩm</span>
+                                    <span class=" cart-header cart-column">Giá</span>
+                                    <span class=" cart-header cart-column">Số Lượng</span>
+                                    <span class=" cart-header cart-column">Thanh tien</span>
+                                </div>
+                             
+        
+                        </div>
+                         <div class="modal-body2">
+                              
+                             
+        
+                        </div>
+                          <div class="cart-row">
+                                    <span class=" cart-header cart-column total">Total : </span>
+                         
+                                </div>
+                      
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                        <button type="button" class="btn btn-primary order" onclick="
+payment()">Thanh Toán</button>
+                    </div>
+                </div>
+            </div>
+            </div>
